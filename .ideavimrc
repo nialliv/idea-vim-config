@@ -1,0 +1,99 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+let mapleader=" "
+
+" Settings ====================================
+" set :nohlsearch
+set so=10
+set nu
+
+" needs an ide reload
+set relativenumber
+
+set showmode
+set showcmd
+
+set clipboard+=unnamed
+
+" search improve
+set ignorecase
+set hlsearch
+set incsearch
+nnoremap <Esc> :nohlsearch<CR>
+
+map <C-l> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+
+" Plugins =====================================
+set highlightedyank
+set easymotion
+
+" Mappings ====================================
+
+" s - generate
+"map <leader>sg <Action>(Generate)
+"ap <leader>sv <Action>(IntroduceVariable)
+"ap <leader>sm <Action>(ExtractMethod)
+"ap <leader>sc <Action>(IntroduceConstant)
+
+" r - rename
+map <leader>r <Action>(RenameElement)
+
+" g - go to
+"map <leader>jd <Action>(GotoDeclaration)
+"map <leader>ji <Action>(GotoImplementation)
+"map <leader>jt <Action>(GotoTest)
+nnoremap gd :action GotoDeclaration<CR>
+"nnoremap gD :action
+nnoremap gI :action GotoImplementation<CR>
+
+" e - error
+map <leader>e <Action>(GotoNextError)
+map <leader>E <Action>(GotoPreviousError)
+
+" k - search
+map <leader>k <Plug>(easymotion-s)
+
+" p - project
+"map <leader>pr <Action>(ExternalSystem.RefreshAllProjects)
+"map <leader>ps <Action>(SelectInProjectView)
+map <leader>pv <Action>(IdeaVim.ReloadVimRc.reload)
+"map <leader>pw <Action>(ActivateProjectToolWindow)
+
+" g - git
+"map <leader>ga <Action>(Annotate)
+"map <leader>gc <Action>(CheckinProject)
+
+" h - help
+map <leader>h <Action>(QuickJavaDoc)
+map gh <Action>(ShowHoverInfo)
+
+" a - action
+map <leader>a <Action>(GotoAction)
+
+" d - Run/Debug
+"map <leader>df <Action>(RunClass)
+"map <leader>dr <Action>(Run)
+"map <leader>db <Action>(Debug)
+
+" breackpoint - build
+"map <leader>b <Action>(ToggleLineBreakpoint)
+
+"imap <C-i> <Action>(ParameterInfo)
+
+" f - find
+map <leader>fr <Action>(RecentFiles)
+map <leader>fp <Action>(FindInPath)
+map <leader>ff <Action>(GotoFile)
+map <leader>fc <Action>(GotoClass)
+map <leader>/ <Action>(Find)
+
+map <leader>m <Action>(ToggleDistractionFreeMode)
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
