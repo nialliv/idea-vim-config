@@ -10,9 +10,7 @@ let mapleader=" "
 set so=10
 set nu
 
-" needs an ide reload
 set relativenumber
-
 set showmode
 set showcmd
 
@@ -33,50 +31,50 @@ map <C-k> <C-w>k
 set highlightedyank
 set easymotion
 set commentary
+set surround
 
 " Mappings ====================================
 
 " s - generate
-"map <leader>sg <Action>(Generate)
-map <leader>sv <Action>(IntroduceVariable)
-map <leader>sm <Action>(ExtractMethod)
-map <leader>sc <Action>(IntroduceConstant)
-map <leader>st <Action>(SurroundWith)
+map <leader>sg <Action>(Generate)<CR>
+map <leader>sv <Action>(IntroduceVariable)<CR>
+map <leader>sm <Action>(ExtractMethod)<CR>
+map <leader>sc <Action>(IntroduceConstant)<CR>
+map <leader>st <Action>(SurroundWith)<CR>
 
 " r - rename
-map <leader>r <Action>(RenameElement)
+map <leader>r <Action>(RenameElement)<CR>
 
 " g - go to
 "map <leader>jd <Action>(GotoDeclaration)
 "map <leader>ji <Action>(GotoImplementation)
 "map <leader>jt <Action>(GotoTest)
-nnoremap gd :action GotoDeclaration<CR>
-"nnoremap gD :action
-nnoremap gI :action GotoImplementation<CR>
+map gd <Action>(GotoDeclaration)<CR>
+map gi <Action>(GotoImplementation)<CR>
 
 " e - error
-map <leader>e <Action>(GotoNextError)
-map <leader>E <Action>(GotoPreviousError)
+map <leader>e <Action>(GotoNextError)<CR>
+map <leader>E <Action>(GotoPreviousError)<CR>
 
 " k - search
-map <leader>k <Plug>(easymotion-s)
+map <leader>k <Plug>(easymotion-s)<CR>
 
 " p - project
 "map <leader>pr <Action>(ExternalSystem.RefreshAllProjects)
-"map <leader>ps <Action>(SelectInProjectView)
-map <leader>pv <Action>(IdeaVim.ReloadVimRc.reload)
-"map <leader>pw <Action>(ActivateProjectToolWindow)
+map <leader>ps <Action>(SelectInProjectView)<CR>
+map <leader>pv <Action>(IdeaVim.ReloadVimRc.reload)<CR>
+map <leader>pw <Action>(ActivateProjectToolWindow)<CR>
 
 " g - git
 "map <leader>ga <Action>(Annotate)
 "map <leader>gc <Action>(CheckinProject)
 
 " h - help
-map <leader>h <Action>(QuickJavaDoc)
-map gh <Action>(ShowHoverInfo)
+map <leader>h <Action>(QuickJavaDoc)<CR>
+map gh <Action>(ShowHoverInfo)<CR>
 
 " a - action
-map <leader>a <Action>(GotoAction)
+map <leader>a <Action>(GotoAction)<CR>
 
 " d - Run/Debug
 "map <leader>df <Action>(RunClass)
@@ -89,13 +87,13 @@ map <leader>a <Action>(GotoAction)
 "imap <C-i> <Action>(ParameterInfo)
 
 " f - find
-map <leader>fr <Action>(RecentFiles)
-map <leader>fp <Action>(FindInPath)
-map <leader>ff <Action>(GotoFile)
-map <leader>fc <Action>(GotoClass)
-map <leader>/ <Action>(Find)
+map <leader>fr <Action>(RecentFiles)<CR>
+map <leader>fp <Action>(FindInPath)<CR>
+map <leader>ff <Action>(GotoFile)<CR>
+map <leader>fc <Action>(GotoClass)<CR>
+map <leader>/ <Action>(Find)<CR>
 
-map <leader>m <Action>(ToggleDistractionFreeMode)
+map <leader>m <Action>(ToggleDistractionFreeMode)<CR>
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
