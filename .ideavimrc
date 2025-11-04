@@ -32,14 +32,16 @@ map <C-k> <C-w>k
 " Plugins =====================================
 set highlightedyank
 set easymotion
+set commentary
 
 " Mappings ====================================
 
 " s - generate
 "map <leader>sg <Action>(Generate)
-"ap <leader>sv <Action>(IntroduceVariable)
-"ap <leader>sm <Action>(ExtractMethod)
-"ap <leader>sc <Action>(IntroduceConstant)
+map <leader>sv <Action>(IntroduceVariable)
+map <leader>sm <Action>(ExtractMethod)
+map <leader>sc <Action>(IntroduceConstant)
+map <leader>st <Action>(SurroundWith)
 
 " r - rename
 map <leader>r <Action>(RenameElement)
