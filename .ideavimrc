@@ -36,25 +36,25 @@ set surround
 " Mappings ====================================
 
 " s - generate
-map <leader>sg <Action>(Generate)<CR>
-map <leader>sv <Action>(IntroduceVariable)<CR>
-map <leader>sm <Action>(ExtractMethod)<CR>
-map <leader>sc <Action>(IntroduceConstant)<CR>
-map <leader>st <Action>(SurroundWith)<CR>
+map <leader>sg <Action>(Generate)
+map <leader>sv <Action>(IntroduceVariable)
+map <leader>sm <Action>(ExtractMethod)
+map <leader>sc <Action>(IntroduceConstant)
+map <leader>st <Action>(SurroundWith)
 
 " r - rename
-map <leader>r <Action>(RenameElement)<CR>
+map <leader>r <Action>(RenameElement)
 
 " g - go to
 "map <leader>jd <Action>(GotoDeclaration)
 "map <leader>ji <Action>(GotoImplementation)
 "map <leader>jt <Action>(GotoTest)
-map gd <Action>(GotoDeclaration)<CR>
-map gi <Action>(GotoImplementation)<CR>
+map gd <Action>(GotoDeclaration)
+map gi <Action>(GotoImplementation)
 
 " e - error
-map <leader>e <Action>(GotoNextError)<CR>
-map <leader>E <Action>(GotoPreviousError)<CR>
+map <leader>e <Action>(GotoNextError)
+map <leader>E <Action>(GotoPreviousError)
 
 " k - search
 map <leader>k <Plug>(easymotion-s)<CR>
@@ -85,6 +85,11 @@ map <leader>a <Action>(GotoAction)<CR>
 "map <leader>b <Action>(ToggleLineBreakpoint)
 
 "imap <C-i> <Action>(ParameterInfo)
+
+" b - buffered
+nnoremap <leader>bd :bd<CR> 
+nnoremap <leader>bn :bn<CR>
+nnoremap <leader>bp :bp<CR>
 
 " f - find
 map <leader>fr <Action>(RecentFiles)<CR>
