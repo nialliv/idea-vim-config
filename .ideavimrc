@@ -62,20 +62,20 @@ map <leader>k <Plug>(easymotion-s)<CR>
 
 " p - project
 "map <leader>pr <Action>(ExternalSystem.RefreshAllProjects)
-map <leader>ps <Action>(SelectInProjectView)<CR>
-map <leader>pv <Action>(IdeaVim.ReloadVimRc.reload)<CR>
-map <leader>pw <Action>(ActivateProjectToolWindow)<CR>
+map <leader>ps <Action>(SelectInProjectView)
+map <leader>pv <Action>(IdeaVim.ReloadVimRc.reload)
+map <leader>pw <Action>(ActivateProjectToolWindow)
 
 " g - git
 "map <leader>ga <Action>(Annotate)
 "map <leader>gc <Action>(CheckinProject)
 
 " h - help
-map <leader>h <Action>(QuickJavaDoc)<CR>
-map gh <Action>(ShowHoverInfo)<CR>
+map <leader>h <Action>(QuickJavaDoc)
+map gh <Action>(ShowHoverInfo)
 
 " a - action
-map <leader>a <Action>(GotoAction)<CR>
+map <leader>a <Action>(GotoAction)
 
 " d - Run/Debug
 "map <leader>df <Action>(RunClass)
@@ -93,13 +93,17 @@ nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
 
 " f - find
-map <leader>fr <Action>(RecentFiles)<CR>
-map <leader>fp <Action>(FindInPath)<CR>
-map <leader>ff <Action>(GotoFile)<CR>
-map <leader>fc <Action>(GotoClass)<CR>
-map <leader>/ <Action>(Find)<CR>
+map <leader>fr <Action>(RecentFiles)
+map <leader>fp <Action>(FindInPath)
+map <leader>ff <Action>(GotoFile)
+map <leader>fc <Action>(GotoClass)
+map <leader>/ <Action>(Find)
 
-map <leader>m <Action>(ToggleDistractionFreeMode)<CR>
+" m - modes
+map <leader>m <Action>(ToggleZenMode)
+
+" z - view
+map <leader>z <Action>(HideAllWindows)
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
