@@ -6,7 +6,6 @@
 let mapleader=" "
 
 " Settings ====================================
-" set :nohlsearch
 set so=10
 set nu
 
@@ -57,14 +56,13 @@ map gi <Action>(GotoImplementation)
 map <leader>e <Action>(GotoNextError)
 map <leader>E <Action>(GotoPreviousError)
 
-" k - search
-map <leader>k <Plug>(easymotion-s)<CR>
-
 " p - project
 "map <leader>pr <Action>(ExternalSystem.RefreshAllProjects)
 map <leader>ps <Action>(SelectInProjectView)
 map <leader>pv <Action>(IdeaVim.ReloadVimRc.reload)
 map <leader>pw <Action>(ActivateProjectToolWindow)
+
+map <leader>pn :set nu relativenumber<CR>
 
 " g - git
 "map <leader>ga <Action>(Annotate)
@@ -78,7 +76,7 @@ map gh <Action>(ShowHoverInfo)
 map <leader>a <Action>(GotoAction)
 
 " d - Run/Debug
-"map <leader>df <Action>(RunClass)
+map <leader>df <Action>(RunClass)
 "map <leader>dr <Action>(Run)
 "map <leader>db <Action>(Debug)
 
@@ -104,6 +102,7 @@ map <leader>m <Action>(ToggleZenMode)
 
 " z - view
 map <leader>z <Action>(HideAllWindows)
+"map <leader>zt <Action>(ActivateTerminalToolWindow)
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
